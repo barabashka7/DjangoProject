@@ -8,6 +8,15 @@
            <h3>{{ article.title }}</h3>
            <h4>{{ article.author.name }}</h4>
            <p>{{ article.text }}</p>
+           <div>
+                <h4>Комментарии<h4>
+               {% for com in comment %}
+                   <h5>{{ com.article.title }}</h5>
+                   <h6>{{ com.author.name }}</h6>
+                   <p>{{ com.text }}</p>
+               {% endfor %}
+
+           </div>
        </div>
    </div>
 {% endblock %}
